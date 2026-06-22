@@ -2,15 +2,12 @@
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
-
-  "homepage": "https://arjunksabu.github.io",
-
+  "homepage": "https://arjuverse.github.io/my-cv",
   "debug": {
     "env": {
       "NODE_ENV": "development"
     }
   },
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,11 +15,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
+    "framer-motion": "^12.40.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-icons": "^5.6.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
