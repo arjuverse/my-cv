@@ -1,10 +1,24 @@
 import { motion } from "framer-motion"
+
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaWater
+  FaWater,
+  FaPython,
+  FaGitAlt,
+  FaLinux,
+  FaWindows
 } from "react-icons/fa"
+
+import {
+  SiGnubash,
+  SiStreamlit
+} from "react-icons/si"
+
+import {
+  TbMap2
+} from "react-icons/tb"
 
 function App() {
   return (
@@ -338,6 +352,246 @@ function App() {
 
 
       </section>
+            {/* SKILLS & TRAINING */}
+      <section className="py-32 px-6">
+
+        <div className="max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-10">
+
+
+            {/* SKILLS */}
+<motion.div
+  initial={{ opacity: 0, x: -40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8"
+>
+
+  <h2 className="text-4xl font-bold text-cyan-400 mb-8">
+    Skills
+  </h2>
+
+
+  <div className="space-y-6">
+
+
+    {[
+      {
+        icon: "🌊",
+        name: "Physical Oceanography & Ocean Observations",
+        level: 90
+      },
+
+      {
+        icon: "📊",
+        name: "Ocean Data Analysis & Visualization",
+        level: 85
+      },
+
+      {
+        icon: <FaPython />,
+        name: "Python",
+        level: 85
+      },
+
+      {
+        icon: "📈",
+        name: "MATLAB",
+        level: 80
+      },
+
+      {
+        icon: "🌊",
+        name: "Ferret / PyFerret",
+        level: 85
+      },
+
+      {
+        icon: <SiGnubash />,
+        name: "Bash Scripts",
+        level: 80
+      },
+
+      {
+        icon: <TbMap2 />,
+        name: "GMT / PyGMT",
+        level: 85
+      },
+
+      {
+        icon: <FaGitAlt />,
+        name: "Git / GitHub",
+        level: 80
+      },
+
+      {
+        icon: <FaLinux />,
+        name: "Linux",
+        level: 85
+      },
+
+      {
+        icon: <SiStreamlit />,
+        name: "Streamlit",
+        level: 85
+      },
+
+      {
+        icon: <FaWindows />,
+        name: "Windows",
+        level: 90
+      },
+
+      {
+        icon: "🌡️",
+        name: "CTD, XBT, XCTD, Hydrophones, MBES, SBES",
+        level: 85
+      },
+
+
+    ].map((skill, index) => (
+
+      <div
+        key={index}
+        className="grid grid-cols-[40px_260px_1fr_60px] items-center gap-4"
+      >
+
+
+        {/* ICON */}
+        <div className="text-3xl text-cyan-400">
+          {skill.icon}
+        </div>
+
+
+        {/* NAME */}
+        <p className="text-slate-200">
+          {skill.name}
+        </p>
+
+
+
+        {/* BAR */}
+        <div className="h-3 bg-white/10 rounded-full overflow-hidden">
+
+
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{
+              width: `${skill.level}%`
+            }}
+            transition={{
+              duration: 1.3,
+              delay: index * 0.1
+            }}
+            className="h-full bg-cyan-400 rounded-full shadow-lg shadow-cyan-400/50"
+          />
+
+
+        </div>
+
+
+
+        {/* VALUE */}
+        <span className="text-cyan-400 font-bold">
+          {skill.level}%
+        </span>
+
+
+      </div>
+
+
+    ))}
+
+
+  </div>
+
+
+</motion.div>
+
+
+
+            {/* CONFERENCE/TRAINING */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8"
+            >
+
+
+              <h2 className="text-4xl font-bold text-cyan-400 mb-10">
+                Conference / Training
+              </h2>
+
+
+              <div className="space-y-8">
+
+
+                <div>
+
+                  <p className="text-cyan-400">
+                    2025
+                  </p>
+
+                  <h3 className="text-xl font-bold">
+                    OSICON - 25
+                  </h3>
+
+                  <p className="text-slate-300 mt-2">
+                    CSIR-National Institute of Oceanography, Goa / Ocean society of India
+                  </p>
+
+                </div>
+
+
+
+                <div>
+
+                  <p className="text-cyan-400">
+                    2022
+                  </p>
+
+                  <h3 className="text-xl font-bold">
+                    Skill Development in Oceanography
+                  </h3>
+
+                  <p className="text-slate-300 mt-2">
+                     Cochin University of Science and Technology, Cochin, India
+                  </p>
+
+                </div>
+
+
+
+                <div>
+
+                  <p className="text-cyan-400">
+                    
+                  </p>
+
+                  <h3 className="text-xl font-bold">
+                    
+                  </h3>
+
+                  <p className="text-slate-300 mt-2">
+                  
+                  </p>
+
+                </div>
+
+
+              </div>
+
+
+            </motion.div>
+
+
+          </div>
+
+        </div>
+
+
+      </section>
 
       {/* PUBLICATIONS */}
       <section className="py-32 px-6">
@@ -383,7 +637,41 @@ function App() {
 
 </motion.div>
 
-            
+  <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  whileHover={{ y: -10 }}
+  className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8"
+>
+
+  <p className="text-cyan-400 text-sm mb-3">
+    Journal Article • 2026
+  </p>
+
+  <h3 className="text-2xl font-bold mb-4 leading-snug">
+    Influence of local and remote climate processes on driving the salinification followed by freshening phases in the eastern Arabian Sea
+  </h3>
+
+  <p className="text-slate-300 leading-8 mb-6">
+    Published in Environmental Research Letters.
+    Research focused on salinity variability in the eastern Arabian Sea and its relation to climate processes. 
+  </p>
+
+  <p className="text-slate-400 text-sm mb-6">
+    Environmental Research Letters • 2026
+  </p>
+
+  <a
+    href=" https://doi.org/10.1088/1748-9326/ae90c8"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block px-5 py-3 rounded-xl bg-cyan-500/20 border border-cyan-400 hover:bg-cyan-500 hover:text-black transition no-underline text-white"
+  >
+    View DOI
+  </a>
+
+</motion.div>          
 
           </div>
 
@@ -399,7 +687,7 @@ function App() {
         </h2>
 
         <p className="mt-8 text-slate-300 text-lg">
-          arjunksabu@gmail.com | +91 9037444198
+          arjunksabu@gmail.com | +91 9037444198 (call / WhatsApp)
         </p>
 
         <p className="mt-4 text-slate-300">
