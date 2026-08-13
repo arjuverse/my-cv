@@ -625,6 +625,11 @@ function App() {
 
   </p>
 
+  <p className="text-slate-400 text-sm mb-6">
+    Geophysical Research Letters • 2024
+  </p>
+
+
   {/* DOI BUTTON */}
   <a
     href="https://doi.org/10.1029/2023GL108036"
